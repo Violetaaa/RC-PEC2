@@ -1,0 +1,48 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "ontology:SoloLeisure" "ontology:FirstClass" "ontology:BusinessClass" "ontology:EconomyClass" "ontology:CoupleLeisure" "ontology:Trip" "ontology:Airlane" "ontology:Aircraft" "ontology:Review" "ontology:Passenger" "ontology:Business" ; /*classes style*/
+	"ontology:hasTitle" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:isVerified" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:hasAircraft" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:hasRating" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:isRecommended" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:trip1" -> "ontology:ryanair" [ label = "ontology:hasAirlaine" ];
+	"ontology:trip1" -> "ontology:boeing" [ label = "ontology:hasAircraft" ];
+	"ontology:hasAirlaine" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:hasComment" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:hasPassenger" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:hasTrip" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"ontology:review1" -> "ontology:trip1" [ label = "ontology:hasTrip" ];
+	"ontology:review1" -> "ontology:passenger1" [ label = "ontology:hasPassenger" ];
+	"NULL" -> "ontology:SoloLeisure" [ label = "rdf:first" ];
+	"NULL" -> "xsd:integer" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "ontology:hasRating" [ label = "owl:onProperty" ];
+	"NULL" -> "727ec56f:18f0c269dcf:-7ff7" [ label = "rdf:rest" ];
+	"NULL" -> "727ec56f:18f0c269dcf:-7ffa" [ label = "rdf:rest" ];
+	"NULL" -> "ontology:CoupleLeisure" [ label = "rdf:first" ];
+	"NULL" -> "727ec56f:18f0c269dcf:-7ff9" [ label = "owl:members" ];
+	"NULL" -> "ontology:Passenger" [ label = "owl:onClass" ];
+	"NULL" -> "ontology:EconomyClass" [ label = "rdf:first" ];
+	"NULL" -> "727ec56f:18f0c269dcf:-7ffc" [ label = "owl:members" ];
+	"NULL" -> "ontology:hasPassenger" [ label = "owl:onProperty" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "ontology:FirstClass" [ label = "rdf:first" ];
+	"NULL" -> "ontology:BusinessClass" [ label = "rdf:first" ];
+	"NULL" -> "727ec56f:18f0c269dcf:-7ff8" [ label = "rdf:rest" ];
+	"NULL" -> "727ec56f:18f0c269dcf:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "ontology:hasTrip" [ label = "owl:onProperty" ];
+	"NULL" -> "ontology:Trip" [ label = "owl:onClass" ];
+	"NULL" -> "ontology:Business" [ label = "rdf:first" ];
+	"http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology" -> "https://creativecommons.org/licenses/by-sa/4.0/" [ label = "cc:license" ];
+	"ontology:Review" -> "ontology:Passenger" [ label = "ontology:hasPassenger" ];
+	"ontology:Review" -> "xsd:string" [ label = "ontology:isRecommended" ];
+	"ontology:Review" -> "xsd:boolean" [ label = "ontology:hasTitle" ];
+	"ontology:Review" -> "ontology:Trip" [ label = "ontology:hasTrip" ];
+	"ontology:Review" -> "xsd:string" [ label = "ontology:hasComment" ];
+	"ontology:Trip" -> "xsd:boolean" [ label = "ontology:isVerified" ];
+	"ontology:Trip" -> "ontology:Airlane" [ label = "ontology:hasAirlaine" ];
+	"ontology:Trip" -> "ontology:Aircraft" [ label = "ontology:hasAircraft" ];
+	"ontology:Review" -> "xsd:integer" [ label = "ontology:hasRating" ];
+
+}
