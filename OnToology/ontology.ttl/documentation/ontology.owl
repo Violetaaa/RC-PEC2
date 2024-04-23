@@ -1,0 +1,614 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology#"
+     xml:base="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:airlines-reviews-ontology="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology">
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:contributor>Violeta Álvarez Areces</terms:contributor>
+        <terms:creator>Violeta Álvarez Areces</terms:creator>
+        <terms:title>Airline Reviews Ontology</terms:title>
+        <airlines-reviews-ontology:preferredNamespacePrefix>aor</airlines-reviews-ontology:preferredNamespacePrefix>
+        <rdfs:comment>Ontology about feedback from passengers who have flown with different airlines, covering passenger, flight and ratings details.</rdfs:comment>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <owl:versionInfo>arl</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasAircraft -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasAircraft">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Aircraft"/>
+        <rdfs:comment>hasAircraft object property</rdfs:comment>
+        <rdfs:label>hasAircraft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasAirlaine -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasAirlaine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Airlane"/>
+        <rdfs:comment>hasAirline object property</rdfs:comment>
+        <rdfs:label>hasAirline</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasPassenger -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasPassenger">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Passenger"/>
+        <rdfs:comment>hasPassenger object property</rdfs:comment>
+        <rdfs:label>hasPassenger</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasTrip -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasTrip">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <rdfs:comment>hasTrip object property</rdfs:comment>
+        <rdfs:label>hasTrip</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasComment -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasComment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Comment of a review</rdfs:comment>
+        <rdfs:label>hasComment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasRating">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Rating of a review</rdfs:comment>
+        <rdfs:label>hasRating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates if the passenger recommends or not the airline in the review</rdfs:comment>
+        <rdfs:label>isRecommended</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/isRecommended -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/isRecommended">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Title of a review</rdfs:comment>
+        <rdfs:label>hasTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/isVerified -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/isVerified">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates if the trip is verified or not</rdfs:comment>
+        <rdfs:label>isVerified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Aircraft -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Aircraft">
+        <rdfs:comment>Aircraft used in the trip</rdfs:comment>
+        <rdfs:label>Aircraft</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/page/Airline</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Airlane -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Airlane">
+        <rdfs:comment>Company that provided the flight</rdfs:comment>
+        <rdfs:label>Airline</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/page/Airline</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/AverageRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/AverageRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Rating"/>
+        <rdfs:comment>Average rating</rdfs:comment>
+        <rdfs:label>AverageRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Business -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Business">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/TravellerType"/>
+        <rdfs:comment>Business</rdfs:comment>
+        <rdfs:isDefinedBy>Business</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/BusinessClass -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/BusinessClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/SeatType"/>
+        <rdfs:comment>Business class</rdfs:comment>
+        <rdfs:label>BusinessClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Country -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Passenger"/>
+        <rdfs:comment>Country of nationality of the passenger</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/page/Country</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/CoupleLeisure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/CoupleLeisure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/TravellerType"/>
+        <rdfs:comment>Couple leisure</rdfs:comment>
+        <rdfs:label>CoupleLeisure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/DateFlown -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/DateFlown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <rdfs:comment>Date of the trip</rdfs:comment>
+        <rdfs:label>DateFlown</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/DatePublished -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/DatePublished">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <rdfs:comment>Publication date of the review</rdfs:comment>
+        <rdfs:label>Date</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Destination -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Destination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <rdfs:comment>Arrival of the flight</rdfs:comment>
+        <rdfs:label>Destination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/EconomyClass -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/EconomyClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/SeatType"/>
+        <rdfs:comment>Economy class</rdfs:comment>
+        <rdfs:label>EconomyClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/FaimilyLeisure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/FaimilyLeisure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/TravellerType"/>
+        <rdfs:comment>Family leisure</rdfs:comment>
+        <rdfs:label>FamilyLeisure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/FirstClass -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/FirstClass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/SeatType"/>
+        <rdfs:comment>First class</rdfs:comment>
+        <rdfs:label>FirstClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/GoodRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/GoodRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Rating"/>
+        <rdfs:comment>Rating is good</rdfs:comment>
+        <rdfs:label>GoodRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Origin -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Origin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <rdfs:comment>Departure of the flight</rdfs:comment>
+        <rdfs:label>Origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Passenger -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Passenger">
+        <rdfs:comment>Person who is traveling</rdfs:comment>
+        <rdfs:label>Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Poor -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Poor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Rating"/>
+        <rdfs:comment>Rating is poor</rdfs:comment>
+        <rdfs:label>PoorRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Rating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Rating">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasRating"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <rdfs:comment>Numerical evaluation of the review</rdfs:comment>
+        <rdfs:label>Rating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasPassenger"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Passenger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/hasTrip"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Feedback of the trip provided by the passenger</rdfs:comment>
+        <rdfs:label>Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/SeatType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/SeatType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <rdfs:comment>Type of seat</rdfs:comment>
+        <rdfs:label>SeatType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/SoloLeisure -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/SoloLeisure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/TravellerType"/>
+        <rdfs:comment>Solo leisure</rdfs:comment>
+        <rdfs:label>SoloLeisure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/TravellerType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/TravellerType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Passenger"/>
+        <rdfs:comment>Type of traveller</rdfs:comment>
+        <rdfs:label>TravellerType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip">
+        <rdfs:comment>Flight took by a passenger</rdfs:comment>
+        <rdfs:label>Trip</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/boeing -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/boeing"/>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/passenger1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/passenger1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Passenger"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/qatar_airways -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/qatar_airways">
+        <rdf:type rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Airlane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/review1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/review1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Review"/>
+        <airlines-reviews-ontology:hasPassenger rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/passenger1"/>
+        <airlines-reviews-ontology:hasTrip rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/trip1"/>
+        <airlines-reviews-ontology:hasComment>Text of review1</airlines-reviews-ontology:hasComment>
+        <airlines-reviews-ontology:hasRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</airlines-reviews-ontology:hasRating>
+        <airlines-reviews-ontology:hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</airlines-reviews-ontology:hasTitle>
+        <airlines-reviews-ontology:isRecommended>Title of review1</airlines-reviews-ontology:isRecommended>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/ryanair -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/ryanair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Airlane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/trip1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/trip1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Trip"/>
+        <airlines-reviews-ontology:hasAircraft rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/boeing"/>
+        <airlines-reviews-ontology:hasAirlaine rdf:resource="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/ryanair"/>
+        <airlines-reviews-ontology:isVerified rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</airlines-reviews-ontology:isVerified>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/Business"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/CoupleLeisure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/SoloLeisure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/BusinessClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/EconomyClass"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/violeta/ontologies/2024/3/airlines-reviews-ontology/FirstClass"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
