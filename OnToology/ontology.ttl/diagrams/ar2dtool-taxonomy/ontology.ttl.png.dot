@@ -1,24 +1,24 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "ontology:FaimilyLeisure" "ontology:SoloLeisure" "ontology:Destination" "ontology:FirstClass" "ontology:BusinessClass" "ontology:Poor" "ontology:Origin" "ontology:EconomyClass" "ontology:DatePublished" "ontology:CoupleLeisure" "ontology:Trip" "ontology:AverageRating" "ontology:Review" "ontology:SeatType" "ontology:TravellerType" "ontology:Passenger" "ontology:DateFlown" "ontology:Business" "ontology:Rating" "ontology:Country" "ontology:GoodRating" ; /*classes style*/
-	"ontology:AverageRating" -> "ontology:Rating" [ label = "rdfs:subClassOf" ];
-	"ontology:BusinessClass" -> "ontology:SeatType" [ label = "rdfs:subClassOf" ];
-	"ontology:Country" -> "ontology:Passenger" [ label = "rdfs:subClassOf" ];
-	"ontology:GoodRating" -> "ontology:Rating" [ label = "rdfs:subClassOf" ];
-	"ontology:DatePublished" -> "ontology:Review" [ label = "rdfs:subClassOf" ];
-	"ontology:FaimilyLeisure" -> "ontology:TravellerType" [ label = "rdfs:subClassOf" ];
-	"ontology:Origin" -> "ontology:Trip" [ label = "rdfs:subClassOf" ];
-	"ontology:SoloLeisure" -> "ontology:TravellerType" [ label = "rdfs:subClassOf" ];
-	"ontology:CoupleLeisure" -> "ontology:TravellerType" [ label = "rdfs:subClassOf" ];
-	"ontology:EconomyClass" -> "ontology:SeatType" [ label = "rdfs:subClassOf" ];
-	"ontology:Business" -> "ontology:TravellerType" [ label = "rdfs:subClassOf" ];
-	"ontology:FirstClass" -> "ontology:SeatType" [ label = "rdfs:subClassOf" ];
-	"ontology:Rating" -> "ontology:Review" [ label = "rdfs:subClassOf" ];
-	"ontology:Destination" -> "ontology:Trip" [ label = "rdfs:subClassOf" ];
-	"ontology:TravellerType" -> "ontology:Passenger" [ label = "rdfs:subClassOf" ];
-	"ontology:DateFlown" -> "ontology:Trip" [ label = "rdfs:subClassOf" ];
-	"ontology:Poor" -> "ontology:Rating" [ label = "rdfs:subClassOf" ];
-	"ontology:SeatType" -> "ontology:Trip" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; ":DateFlown" ":GoodRating" ":SeatType" ":Origin" ":Country" ":FirstClass" ":Trip" ":TravellerType" ":Destination" ":Business" ":EconomyClass" ":FaimilyLeisure" ":CoupleLeisure" ":AverageRating" ":SoloLeisure" ":Rating" ":Review" ":Poor" ":Passenger" ":DatePublished" ":BusinessClass" ; /*classes style*/
+	":FirstClass" -> ":SeatType" [ label = "rdfs:subClassOf" ];
+	":Business" -> ":TravellerType" [ label = "rdfs:subClassOf" ];
+	":Rating" -> ":Review" [ label = "rdfs:subClassOf" ];
+	":FaimilyLeisure" -> ":TravellerType" [ label = "rdfs:subClassOf" ];
+	":AverageRating" -> ":Rating" [ label = "rdfs:subClassOf" ];
+	":BusinessClass" -> ":SeatType" [ label = "rdfs:subClassOf" ];
+	":DateFlown" -> ":Trip" [ label = "rdfs:subClassOf" ];
+	":DatePublished" -> ":Review" [ label = "rdfs:subClassOf" ];
+	":SoloLeisure" -> ":TravellerType" [ label = "rdfs:subClassOf" ];
+	":CoupleLeisure" -> ":TravellerType" [ label = "rdfs:subClassOf" ];
+	":Poor" -> ":Rating" [ label = "rdfs:subClassOf" ];
+	":TravellerType" -> ":Passenger" [ label = "rdfs:subClassOf" ];
+	":Origin" -> ":Trip" [ label = "rdfs:subClassOf" ];
+	":Country" -> ":Passenger" [ label = "rdfs:subClassOf" ];
+	":Destination" -> ":Trip" [ label = "rdfs:subClassOf" ];
+	":GoodRating" -> ":Rating" [ label = "rdfs:subClassOf" ];
+	":SeatType" -> ":Trip" [ label = "rdfs:subClassOf" ];
+	":EconomyClass" -> ":SeatType" [ label = "rdfs:subClassOf" ];
 
 }
